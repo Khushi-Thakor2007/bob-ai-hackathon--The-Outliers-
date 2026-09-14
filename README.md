@@ -1,4 +1,4 @@
-# 🚀 [Your Project Title Here]
+# 🚀 [Logistics & Ports]
 
 > ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
 
@@ -8,10 +8,10 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Your Team Name] |
+| **Team Name** | [Outliers] |
 | **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
+| **Team Lead** | [Khushi Nimeshkumar Thakor] — [khushithakor@gmail.com] |
+| **Members** | [Heer Hiteshkumar Shah], [Shah Mahi Jignesh], [Kacha priyanshu Sunilbhai] |
 
 ---
 
@@ -33,11 +33,15 @@
 
 ## ✨ Key Features
 
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
+- **Feature 1:** [AI-Powered Disruption Detection:Identifies active supply-chain disruptions such as weather events, port    strikes, and geopolitical issues, and determines which shipments are affected.]
+- **Feature 2:** [Intelligent Route & Carrier Recommendation
+Analyzes disruption conditions and recommends alternative routes and carriers to minimize delays and maintain shipment continuity.]
+- **Feature 3:** [Fleet Utilisation Optimization
+Detects idle fleet assets such as trucks, containers, and vessels and recommends their redeployment to shipments that need additional capacity.]
+- **Feature 4:** [Cold-Chain Monitoring & Risk Detection
+Monitors IoT temperature data for sensitive shipments and detects temperature excursions before delivery.]
+- **Feature 5:** [AI Risk & Severity Assessment
+Evaluates affected shipments and cold-chain incidents, prioritizes critical cases, and provides actionable recommendations to reduce potential losses.]
 
 ---
 
