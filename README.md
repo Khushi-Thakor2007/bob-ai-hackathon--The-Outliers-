@@ -19,7 +19,7 @@
 
 > In 2–3 sentences: What problem does your project solve? Who experiences this problem?
 
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
+[Supply chain managers struggle to quickly identify which shipments are affected when disruptions such as weather events, port strikes, or geopolitical crises occur. At the same time, fleet assets may remain idle while other routes are overloaded, and cold-chain shipments can suffer undetected temperature excursions that may result in significant cargo losses.]
 
 ---
 
@@ -27,7 +27,7 @@
 
 > In 2–3 sentences: What did you build? How does it solve the problem above?
 
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
+[We are building an AI-powered Supply Chain Control Tower with Bob that monitors disruptions, shipments, fleet assets, and cold-chain IoT data in one platform. It identifies at-risk shipments, recommends alternative routes or carriers, finds idle fleet assets for redeployment, and detects and classifies temperature excursions so logistics teams can take action before major losses occur.]
 
 ---
 
