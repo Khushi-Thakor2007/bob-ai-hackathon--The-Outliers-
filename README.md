@@ -49,10 +49,10 @@ Evaluates affected shipments and cold-chain incidents, prioritizes critical case
 
 | Category | Technologies |
 |---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
+| **Languages** | [Python, TypeScript,HTML,Tailwint CSS] |
+| **Frameworks** | [FastAPI, React - js] |
+| **IBM Technologies** | [watsonx.ai, IBM Bob, IBM Cloud] |
+| **Databases** | [PostgreSQL, Redis] |
 | **Other** | [e.g., Docker, GitHub Actions] |
 
 ---
@@ -112,14 +112,20 @@ cp .env.example .env
 
 > Be honest — judges appreciate transparency over overclaiming.
 
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
-
+Known Limitations
+Uses realistic demo/seed logistics, fleet, and IoT data instead of live feeds.
+Route and carrier recommendations are MVP-level predefined scenarios.
+Cold-chain IoT readings are simulated, with no direct sensor integration.
+Bob AI provides data-based recommendations, not autonomous decisions.
+Live integrations with GPS, weather, ports, carriers, TMS/ERP are not yet implemented.
+Authentication, scalability, and full end-to-end optimization are not production-ready.
 ---
 
 ## 🏅 What We're Most Proud Of
 
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
+We transformed supply-chain disruption from simple monitoring into a decision-support workflow:
 
+Disruption → Impact Analysis → Risk Prioritization → Route/Carrier Recommendation → Fleet Redeployment → Cold-Chain Alerts → AI Explanation
+
+Our “Simulate Port Strike” scenario demonstrates this complete workflow, while Bob AI enables operators to ask questions in natural language and receive explainable, backend-driven answers.
 ---
