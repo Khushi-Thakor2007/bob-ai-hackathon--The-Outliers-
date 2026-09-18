@@ -1,79 +1,51 @@
-# Setup Guide
-
-> **This file is read by the automated evaluation pipeline. Be precise and complete.**
+# Setup Guide: Supply Chain Control Tower
 
 ## Prerequisites
+- Python 3.10 or higher
+- Node.js 18 or higher (with npm)
 
-Before you begin, ensure you have the following installed:
-
-- [ ] [e.g., Python 3.11+]
-- [ ] [e.g., Node.js 18+]
-- [ ] [e.g., Docker Desktop]
-- [ ] [e.g., An IBM Cloud account with watsonx.ai access]
-
-## Environment Variables
-
-Copy `.env.example` to `.env` and fill in the values:
+## 1. Backend Setup
 
 ```bash
-cp .env.example .env
+cd src/backend
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# Windows PowerShell:
+.\venv\Scripts\Activate.ps1
+# Linux/macOS:
+source venv/bin/activate
+
+# Install requirements
+pip install -r requirements.txt
+
+# Run the backend API server
+python run.py
 ```
+Backend will start on `http://localhost:8000`. Database tables and 50+ seed shipments are automatically initialized on startup.
 
-| Variable | Description | Required |
-|---|---|---|
-| `WATSONX_API_KEY` | Your IBM watsonx.ai API key | Yes |
-| `WATSONX_PROJECT_ID` | Your watsonx.ai project ID | Yes |
-| `DATABASE_URL` | PostgreSQL connection string | Yes |
-| `SLACK_WEBHOOK_URL` | Slack webhook for alerts | No |
-
-## Installation
+## 2. Frontend Setup
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/[your-org]/[your-repo].git
-cd [your-repo]
+cd src/frontend
 
-# 2. Install backend dependencies
-[your command — e.g.: pip install -r requirements.txt]
+# Install frontend dependencies
+npm install --legacy-peer-deps
 
-# 3. Install frontend dependencies (if applicable)
-[your command — e.g.: cd frontend && npm install]
-
-# 4. Set up the database (if applicable)
-[your command — e.g.: python manage.py migrate]
+# Run development server
+npm run dev
 ```
+Frontend will be accessible at `http://localhost:5173`.
 
-## Running the Application
-
-```bash
-# Start the backend
-[your command — e.g.: uvicorn app.main:app --reload]
-
-# Start the frontend (in a separate terminal, if applicable)
-[your command — e.g.: cd frontend && npm run dev]
+## 3. Environment Variables (Optional)
+In `src/backend/.env`:
+```env
+DATABASE_URL=sqlite:///./supply_chain.db
+OPENAI_API_KEY=
+WATSONX_API_KEY=
+WATSONX_PROJECT_ID=
+APP_ENV=development
 ```
-
-The application will be available at: `http://localhost:[PORT]`
-
-## Running Tests
-
-```bash
-[your test command — e.g.: pytest tests/ -v]
-```
-
-## Quick Demo (Optional)
-
-If you have a demo script or sample data to showcase the project quickly:
-
-```bash
-[e.g.: python demo/seed_demo_data.py]
-[e.g.: open http://localhost:8000/demo]
-```
-
-## Troubleshooting
-
-| Issue | Solution |
-|---|---|
-| [e.g., `ModuleNotFoundError`] | [e.g., Run `pip install -r requirements.txt` again] |
-| [e.g., Database connection refused] | [e.g., Ensure PostgreSQL is running: `docker compose up db`] |
-| [e.g., watsonx.ai 401 error] | [e.g., Check `WATSONX_API_KEY` in your `.env` file] |
+*Note: Bob AI Assistant runs seamlessly in offline operational mode without any API keys.*

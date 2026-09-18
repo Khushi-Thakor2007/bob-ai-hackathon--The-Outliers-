@@ -8,9 +8,9 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | [Outliers] |
+| **Team Name** | [The Outliers] |
 | **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Khushi Nimeshkumar Thakor] — [khushithakor@gmail.com] |
+| **Team Lead** | [Khushi Nimeshkumar Thakor] — [khushithakor2007@gmail.com] |
 | **Members** | [Heer Hiteshkumar Shah], [Shah Mahi Jignesh], [Kacha priyanshu Sunilbhai] |
 
 ---

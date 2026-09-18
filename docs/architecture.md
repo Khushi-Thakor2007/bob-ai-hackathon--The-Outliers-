@@ -1,49 +1,37 @@
-# Architecture
+# Architecture Document: Supply Chain Control Tower
 
-## System Architecture
+## System Overview
+The platform is designed as an enterprise-grade **Supply Chain Disruption Assistant & Fleet Utilisation Optimizer**. It integrates spatial disruption detection, deterministic multi-factor risk scoring, route optimization, dynamic fleet redeployment, cold-chain IoT excursion classification, and a tool-calling AI assistant (Bob).
 
-[Describe the overall architecture of your system. Replace the Mermaid diagram below with your actual architecture.]
-
-```mermaid
-graph TD
-    A[User / Browser] -->|HTTP| B[Frontend - React]
-    B -->|REST API| C[Backend - FastAPI]
-    C -->|SDK| D[watsonx.ai]
-    C -->|Query| E[PostgreSQL]
-    C -->|Publish| F[Slack Webhook]
-    D -->|Inference Result| C
+```
+[Browser / Operator UI]
+        │  (React 19, TypeScript, Tailwind CSS, Leaflet, SVG Visualizations)
+        ▼
+[FastAPI Gateway: Port 8000]
+        │
+        ├── /api/dashboard/summary
+        ├── /api/shipments (CRUD, multi-filter, route authorization)
+        ├── /api/disruptions (Spatial analysis, toggle, impact)
+        ├── /api/fleet (Utilization, redeployment matchmaker)
+        ├── /api/cold-chain (IoT telemetry, excursion detection)
+        ├── /api/bob/query (Strict tool-calling orchestrator)
+        └── /api/simulation (Port Strike, Temp Excursion, Reset)
+        │
+        ▼
+[Domain Engines & Services]
+  ├── DisruptionEngine (Haversine geodesic & corridor match)
+  ├── RiskEngine (4-factor weighted scoring model)
+  ├── RouteOptimizer (Multimodal bypass & carrier optimization)
+  ├── FleetOptimizer (Capacity & proximity matching)
+  ├── ColdChainEngine (IoT stream classification & duration detection)
+  └── SimulationEngine (Scenario state orchestrator)
+        │
+        ▼
+[Data Layer]
+  └── SQLAlchemy 2.0 ORM -> SQLite / PostgreSQL
 ```
 
-## Components
-
-| Component | Technology | Responsibility |
-|---|---|---|
-| Frontend | [e.g., React 18] | [e.g., Dashboard UI, user interaction] |
-| Backend API | [e.g., FastAPI] | [e.g., Business logic, orchestration] |
-| AI / ML | [e.g., watsonx.ai] | [e.g., Anomaly scoring, classification] |
-| Database | [e.g., PostgreSQL] | [e.g., Storing pipeline events and scores] |
-| Notifications | [e.g., Slack API] | [e.g., Alerting on threshold breaches] |
-
-## Data Flow
-
-[Describe how data moves through your system from input to output.]
-
-1. [e.g., Pipeline logs are ingested via a webhook from GitHub Actions]
-2. [e.g., Logs are preprocessed and chunked into 512-token segments]
-3. [e.g., Each chunk is sent to the watsonx.ai inference endpoint]
-4. [e.g., Anomaly scores are stored in PostgreSQL]
-5. [e.g., The React dashboard polls the API every 30 seconds to refresh]
-
-## Security Considerations
-
-[Note any security decisions relevant to the architecture — even if basic.]
-
-- [e.g., API keys stored in environment variables, never committed to git]
-- [e.g., All API routes require a Bearer token]
-- [e.g., Database credentials rotated via IBM Secrets Manager]
-
-## Scalability Notes
-
-[Optional: how would this scale beyond the hackathon prototype?]
-
-[e.g., "The FastAPI backend is stateless and could be horizontally scaled behind a load balancer. The watsonx.ai calls are the bottleneck and would benefit from request batching."]
+## Security & Reliability Principles
+1. **Source of Truth**: The database and backend calculation engines are the sole authority for business figures. The LLM cannot invent numbers.
+2. **Deterministic Fallbacks**: If external API keys are not supplied, Bob Assistant uses a built-in operational orchestrator that executes the exact same tools and returns structured analytical results.
+3. **Graceful Degradation**: Dual database configuration uses local SQLite when `DATABASE_URL` is unset, and seamlessly connects to PostgreSQL in production environments.

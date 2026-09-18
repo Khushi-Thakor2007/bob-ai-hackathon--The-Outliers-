@@ -1,41 +1,12 @@
-# Solution Overview
+# Solution Overview: Supply Chain Control Tower & Bob AI
 
-## What We Built
+## The Solution
+An intelligent full-stack operations platform combining real-time spatial corridor analysis, deterministic risk modeling, multi-modal bypass route optimization, dynamic fleet redeployment, cold-chain IoT excursion detection, and Bob AI Assistant.
 
-[Describe your solution in plain language. Avoid jargon — write as if explaining to a smart colleague unfamiliar with your tech stack.]
-
-## How It Works
-
-[Explain the core mechanism step by step. A numbered list or simple flow works well here.]
-
-1. [Step 1: e.g., "User connects their GitHub repository via OAuth"]
-2. [Step 2: e.g., "The system ingests pipeline logs and feeds them to watsonx.ai"]
-3. [Step 3: e.g., "An anomaly score is computed and displayed on the dashboard"]
-4. [Step 4: e.g., "Alerts are sent to Slack when the score exceeds a threshold"]
-
-## Architecture Diagram
-
-> See [`architecture.md`](architecture.md) for the detailed diagram.
-
-[Optionally include a simple ASCII or Mermaid diagram here for quick reference.]
-
-```
-[User] → [Frontend: React] → [API: FastAPI] → [watsonx.ai] → [Dashboard]
-                                    ↓
-                             [PostgreSQL DB]
-```
-
-## Key Design Decisions
-
-| Decision | Rationale |
-|---|---|
-| [e.g., Used watsonx.ai for anomaly detection] | [e.g., Pre-trained models reduced time-to-value vs. building from scratch] |
-| [Decision 2] | [Rationale 2] |
-| [Decision 3] | [Rationale 3] |
-
-## IBM Technologies Used
-
-[Explain specifically HOW you used each IBM technology — not just that you used it.]
-
-- **[IBM Tech 1, e.g., watsonx.ai]:** [How it was used — e.g., "Used the `ibm/granite-13b-instruct-v2` model via the Python SDK to classify anomaly types from log text."]
-- **[IBM Tech 2]:** [How it was used]
+## Key Capabilities
+1. **Automated Impact Mapping**: Calculates geodesic exposure without manual tagging.
+2. **Deterministic Risk Prioritization**: Computes Low, Medium, High, and Critical risk with clear mathematical justification.
+3. **Multimodal Bypass Routing**: Compares Express Road, Rail Container Depots, and Alternate Carriers with delay and cost trade-offs.
+4. **Fleet Redeployment Matchmaker**: Pairs idle assets with congested corridors based on proximity and capacity.
+5. **Cold-Chain IoT Surveillance**: Analyzes time-series telemetry to catch temperature excursions early and classify severity according to protocol.
+6. **Bob AI Assistant**: Tool-calling orchestrator providing operational answers with zero hallucinations.
