@@ -1,7 +1,7 @@
 # Presentation
 
 Place your slide deck in this folder.
-
+https://docs.google.com/presentation/d/1A7o7SQbj0Y0b57zN94yergPIYbVqokBz/edit?usp=drive_link&ouid=116831056028535900191&rtpof=true&sd=true
 ## Accepted Formats
 
   slides.pdf      ← Preferred (universally viewable)
